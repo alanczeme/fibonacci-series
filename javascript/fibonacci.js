@@ -1,5 +1,21 @@
 function fibonacci(num) {
-  // type your code here
+  
+  if(num === 0) return 0;
+  if(num === 1) return 1;
+
+  // Otherwise, if n>=2:
+  let nMinus2 = 0;
+  let nMinus1 = 1;
+  let sum = -1;
+
+  while (num >= 2) {
+    sum = nMinus2+nMinus1
+    nMinus2 = nMinus1
+    nMinus1 = sum
+    num--
+  }
+
+  return sum;
 }
 
 if (require.main === module) {

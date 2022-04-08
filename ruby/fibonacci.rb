@@ -1,5 +1,22 @@
 def fibonacci(num)
-  # type your code in here
+  
+  if num == 0 then return 0 end;
+  if num == 1 then return 1 end;
+
+  # Otherwise, if n>=2:
+  nMinus2 = 0;
+  nMinus1 = 1;
+  sum = -1;
+
+  while num >= 2 do
+    sum = nMinus2+nMinus1
+    nMinus2 = nMinus1
+    nMinus1 = sum
+    num--
+  end
+
+  return sum;
+  
 end
 
 if __FILE__ == $PROGRAM_NAME
